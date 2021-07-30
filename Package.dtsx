@@ -1,0 +1,1240 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/30/2021 10:14:40 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HCITC1Y5GS73"
+  DTS:CreatorName="HCO\Laura.Hogan"
+  DTS:DTSID="{F8CF2CB0-F654-492D-B75F-8816B302C073}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{B32D6FF4-EFAC-4D02-91FC-9AD2E3D15895}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[svdjadoadb1.hco.hc.hctx.net.JADEDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{35624CDF-4E4C-415F-90B7-67F12AA2E873}"
+      DTS:ObjectName="svdjadoadb1.hco.hc.hctx.net.JADEDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=svdjadoadb1.hco.hc.hctx.net;Initial Catalog=JADEDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[svpitcbi01.hco.hc.hctx.net.CAD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C6E7D6B6-C9D7-42A4-9F18-8C0C0B7D0E95}"
+      DTS:ObjectName="svpitcbi01.hco.hc.hctx.net.CAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=svpitcbi01.hco.hc.hctx.net;Initial Catalog=CAD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{74A4D99C-9816-4EAE-A143-F5FC1FD89603}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[CAD].[vw_CALL_DETAILS_JAD_EXTRACTSTG]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[svdjadoadb1.hco.hc.hctx.net.JADEDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[svdjadoadb1.hco.hc.hctx.net.JADEDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Call_Type"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Type]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Type]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Type_Grouping]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Call_Type_Grouping"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Type_Grouping]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Type_Grouping]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Location_Zip_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="Call_Location_Zip_Code"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Location_Zip_Code]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Location_Zip_Code]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year_Number]"
+                      cachedDataType="i2"
+                      cachedName="Year_Number"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_Number]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year_Number]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Month_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="Month_Name"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month_Name]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Month_Name]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Actual_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Actual_Date"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Actual_Date]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Actual_Date]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agency_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="Agency_Name"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agency_Name]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Agency_Name]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agency_Group]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Agency_Group"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agency_Group]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Agency_Group]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Created_By_Agency_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="Call_Created_By_Agency_Name"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Created_By_Agency_Name]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_By_Agency_Name]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Created_By_Agency_Group]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Call_Created_By_Agency_Group"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Created_By_Agency_Group]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_By_Agency_Group]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Dispatched_By_Agency_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="Call_Dispatched_By_Agency_Name"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Dispatched_By_Agency_Name]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Dispatched_By_Agency_Name]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Dispatched_By_Agency_Group]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Call_Dispatched_By_Agency_Group"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Dispatched_By_Agency_Group]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Dispatched_By_Agency_Group]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Responded_By_Agency_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="Call_Responded_By_Agency_Name"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Responded_By_Agency_Name]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Responded_By_Agency_Name]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Responded_By_Agency_Group]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Call_Responded_By_Agency_Group"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Responded_By_Agency_Group]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Responded_By_Agency_Group]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[District_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="District_Name"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[District_Name]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[District_Name]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CallTime_Two_Hour_Bucket]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="19"
+                      cachedName="CallTime_Two_Hour_Bucket"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CallTime_Two_Hour_Bucket]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CallTime_Two_Hour_Bucket]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CallTime_Hour]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="CallTime_Hour"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CallTime_Hour]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CallTime_Hour]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Source]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Call_Source"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Source]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Source]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Priority]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Priority"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Priority]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Priority]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Disposition_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="Disposition_Code"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Disposition_Code]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Disposition_Code]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Disposition_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Disposition_Name"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Disposition_Name]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Disposition_Name]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Enroute_to_Closed_Seconds]"
+                      cachedDataType="i4"
+                      cachedName="Call_Enroute_to_Closed_Seconds"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Enroute_to_Closed_Seconds]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Enroute_to_Closed_Seconds]" />
+                    <inputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="Call_Number"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Number]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Number]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Call_Type" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Type_Grouping]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Call_Type_Grouping" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Location_Zip_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Location_Zip_Code" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_Number]"
+                      dataType="i4"
+                      name="Year_Number" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Month_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Actual_Date]"
+                      dataType="dbTimeStamp"
+                      name="Actual_Date" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Agency_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Agency_Group" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Created_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Created_By_Agency_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Created_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Call_Created_By_Agency_Group" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Dispatched_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Dispatched_By_Agency_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Dispatched_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Call_Dispatched_By_Agency_Group" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Responded_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Responded_By_Agency_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Responded_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Call_Responded_By_Agency_Group" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[District_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="District_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CallTime_Two_Hour_Bucket]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="CallTime_Two_Hour_Bucket" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CallTime_Hour]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="CallTime_Hour" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Source]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Call_Source" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Priority]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Priority" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Disposition_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Disposition_Code" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Disposition_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Disposition_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Enroute_to_Closed_Seconds]"
+                      dataType="i4"
+                      name="Call_Enroute_to_Closed_Seconds" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Number" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[vw_CALL_DETAILS_JAD_EXTRACT]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[svpitcbi01.hco.hc.hctx.net.CAD]"
+                  connectionManagerRefId="Package.ConnectionManagers[svpitcbi01.hco.hc.hctx.net.CAD]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Type]"
+                      length="50"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Type]"
+                      name="Call_Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Type_Grouping]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Type_Grouping]"
+                      length="100"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Type_Grouping]"
+                      name="Call_Type_Grouping"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Location_Zip_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Location_Zip_Code]"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Location_Zip_Code]"
+                      name="Call_Location_Zip_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year_Number]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year_Number]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year_Number]"
+                      name="Year_Number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Month_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Month_Name]"
+                      length="9"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Month_Name]"
+                      name="Month_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Actual_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Actual_Date]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Actual_Date]"
+                      name="Actual_Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Agency_Name]"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Agency_Name]"
+                      name="Agency_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Agency_Group]"
+                      length="10"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Agency_Group]"
+                      name="Agency_Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Created_By_Agency_Name]"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_By_Agency_Name]"
+                      name="Call_Created_By_Agency_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Created_By_Agency_Group]"
+                      length="10"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_By_Agency_Group]"
+                      name="Call_Created_By_Agency_Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Dispatched_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Dispatched_By_Agency_Name]"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Dispatched_By_Agency_Name]"
+                      name="Call_Dispatched_By_Agency_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Dispatched_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Dispatched_By_Agency_Group]"
+                      length="10"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Dispatched_By_Agency_Group]"
+                      name="Call_Dispatched_By_Agency_Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Responded_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Responded_By_Agency_Name]"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Responded_By_Agency_Name]"
+                      name="Call_Responded_By_Agency_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Responded_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Responded_By_Agency_Group]"
+                      length="10"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Responded_By_Agency_Group]"
+                      name="Call_Responded_By_Agency_Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[District_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[District_Name]"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[District_Name]"
+                      name="District_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CallTime_Two_Hour_Bucket]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CallTime_Two_Hour_Bucket]"
+                      length="19"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CallTime_Two_Hour_Bucket]"
+                      name="CallTime_Two_Hour_Bucket"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CallTime_Hour]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CallTime_Hour]"
+                      length="2"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CallTime_Hour]"
+                      name="CallTime_Hour"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Source]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Source]"
+                      length="5"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Source]"
+                      name="Call_Source"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Priority]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Priority]"
+                      length="3"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Priority]"
+                      name="Priority"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Disposition_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Disposition_Code]"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Disposition_Code]"
+                      name="Disposition_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Disposition_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Disposition_Name]"
+                      length="50"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Disposition_Name]"
+                      name="Disposition_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Enroute_to_Closed_Seconds]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Enroute_to_Closed_Seconds]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Enroute_to_Closed_Seconds]"
+                      name="Call_Enroute_to_Closed_Seconds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Number]"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Number]"
+                      name="Call_Number"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Call_Type" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Type_Grouping]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Call_Type_Grouping" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Location_Zip_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Location_Zip_Code" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year_Number]"
+                      dataType="i2"
+                      name="Year_Number" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Month_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="Month_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Actual_Date]"
+                      dataType="dbTimeStamp"
+                      name="Actual_Date" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Agency_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Agency_Group" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Created_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Created_By_Agency_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Created_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Call_Created_By_Agency_Group" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Dispatched_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Dispatched_By_Agency_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Dispatched_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Call_Dispatched_By_Agency_Group" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Responded_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Responded_By_Agency_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Responded_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Call_Responded_By_Agency_Group" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[District_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="District_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CallTime_Two_Hour_Bucket]"
+                      codePage="1252"
+                      dataType="str"
+                      length="19"
+                      name="CallTime_Two_Hour_Bucket" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CallTime_Hour]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="CallTime_Hour" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Source]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Call_Source" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Priority]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="Priority" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Disposition_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Disposition_Code" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Disposition_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Disposition_Name" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Enroute_to_Closed_Seconds]"
+                      dataType="i4"
+                      name="Call_Enroute_to_Closed_Seconds" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Call_Number" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Type]"
+                      name="Call_Type" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Type_Grouping]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Type_Grouping]"
+                      name="Call_Type_Grouping" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Location_Zip_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Location_Zip_Code]"
+                      name="Call_Location_Zip_Code" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year_Number]"
+                      dataType="i2"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year_Number]"
+                      name="Year_Number" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Month_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Month_Name]"
+                      name="Month_Name" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Actual_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Actual_Date]"
+                      name="Actual_Date" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Agency_Name]"
+                      name="Agency_Name" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Agency_Group]"
+                      name="Agency_Group" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Created_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Created_By_Agency_Name]"
+                      name="Call_Created_By_Agency_Name" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Created_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Created_By_Agency_Group]"
+                      name="Call_Created_By_Agency_Group" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Dispatched_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Dispatched_By_Agency_Name]"
+                      name="Call_Dispatched_By_Agency_Name" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Dispatched_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Dispatched_By_Agency_Group]"
+                      name="Call_Dispatched_By_Agency_Group" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Responded_By_Agency_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Responded_By_Agency_Name]"
+                      name="Call_Responded_By_Agency_Name" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Responded_By_Agency_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Responded_By_Agency_Group]"
+                      name="Call_Responded_By_Agency_Group" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[District_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[District_Name]"
+                      name="District_Name" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CallTime_Two_Hour_Bucket]"
+                      codePage="1252"
+                      dataType="str"
+                      length="19"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CallTime_Two_Hour_Bucket]"
+                      name="CallTime_Two_Hour_Bucket" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CallTime_Hour]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CallTime_Hour]"
+                      name="CallTime_Hour" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Source]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Source]"
+                      name="Call_Source" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Priority]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Priority]"
+                      name="Priority" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Disposition_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Disposition_Code]"
+                      name="Disposition_Code" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Disposition_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Disposition_Name]"
+                      name="Disposition_Name" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Enroute_to_Closed_Seconds]"
+                      dataType="i4"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Enroute_to_Closed_Seconds]"
+                      name="Call_Enroute_to_Closed_Seconds" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Number]"
+                      name="Call_Number" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{98138BB3-6B4D-44AB-A886-18E1142C31A2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CAD_vw_Call_Details_JAD_ExtractSTG Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{35624CDF-4E4C-415F-90B7-67F12AA2E873}"
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;&#x9;&#x9;TABLE_TYPE ='BASE TABLE'&#xA;&#x9;AND TABLE_SCHEMA = 'cad'&#xA;&#x9;AND TABLE_NAME = 'vw_CALL_DETAILS_JAD_EXTRACTSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [cad].[vw_CALL_DETAILS_JAD_EXTRACTSTG]&#xA;GO&#xA;CREATE TABLE [cad].[vw_CALL_DETAILS_JAD_EXTRACTSTG](&#xA;&#x9;[Call_Type] [varchar](50) NULL,&#xA;&#x9;[Call_Type_Grouping] [varchar](100) NULL,&#xA;&#x9;[Call_Location_Zip_Code] [varchar](25) NULL,&#xA;&#x9;[Year_Number] [int] NULL,&#xA;&#x9;[Month_Name] [varchar](20) NULL,&#xA;&#x9;[Actual_Date] [datetime] NULL,&#xA;&#x9;[Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Agency_Group] [varchar](20) NULL,&#xA;&#x9;[Call_Created_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Created_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[Call_Dispatched_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Dispatched_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[Call_Responded_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Responded_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[District_Name] [varchar](40) NULL,&#xA;&#x9;[CallTime_Two_Hour_Bucket] [varchar](40) NULL,&#xA;&#x9;[CallTime_Hour] [varchar](4) NULL,&#xA;&#x9;[Call_Source] [varchar](8) NULL,&#xA;&#x9;[Priority] [varchar](8) NULL,&#xA;&#x9;[Disposition_Code] [varchar](25) NULL,&#xA;&#x9;[Disposition_Name] [varchar](50) NULL,&#xA;&#x9;[Call_Enroute_to_Closed_Seconds] [int] NULL,&#xA;&#x9;[Call_Number] [varchar](25) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{6BD8D0A2-091A-419F-B7B0-9FBA42C543FE}"
+      DTS:From="Package\CAD_vw_Call_Details_JAD_ExtractSTG Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="371,42"
+          Id="Package\CAD_vw_Call_Details_JAD_ExtractSTG Execute SQL Task"
+          TopLeft="151,66" />
+        <NodeLayout
+          Size="356,42"
+          Id="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task"
+          TopLeft="639,69" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="522,88.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="117,0"
+              Start="0,0"
+              End="109.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="109.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source"
+          TopLeft="173,103" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination"
+          TopLeft="571,101" />
+        <EdgeLayout
+          Id="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="330,123">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="241,0"
+              Start="0,0"
+              End="233.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="233.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
