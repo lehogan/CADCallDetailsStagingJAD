@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{6BA2713D-96A7-459A-A816-9D068ABF10EB}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{14D50B05-7B8A-48CC-B1D2-85798C38D6D0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -336,47 +336,13 @@
                       externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Unit]"
                       lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Unit]" />
                     <inputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Creation_to_Entered_Seconds]"
-                      cachedDataType="i4"
-                      cachedName="Call_Creation_to_Entered_Seconds"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Creation_to_Entered_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_Entered_Seconds]" />
-                    <inputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Creation_to_Enroute_Seconds]"
-                      cachedDataType="i4"
-                      cachedName="Call_Creation_to_Enroute_Seconds"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Creation_to_Enroute_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_Enroute_Seconds]" />
-                    <inputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Entered_to_Enroute_Seconds]"
-                      cachedDataType="i4"
-                      cachedName="Call_Entered_to_Enroute_Seconds"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Entered_to_Enroute_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Entered_to_Enroute_Seconds]" />
-                    <inputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Enroute_to_OnScene_Seconds]"
-                      cachedDataType="i4"
-                      cachedName="Call_Enroute_to_OnScene_Seconds"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Enroute_to_OnScene_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Enroute_to_OnScene_Seconds]" />
-                    <inputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Creation_to_OnScene_Seconds]"
-                      cachedDataType="i4"
-                      cachedName="Call_Creation_to_OnScene_Seconds"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Creation_to_OnScene_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_OnScene_Seconds]" />
-                    <inputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Incident_Duration_Seconds]"
-                      cachedDataType="i4"
-                      cachedName="Incident_Duration_Seconds"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Incident_Duration_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Incident_Duration_Seconds]" />
-                    <inputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Time_Spent_OnScene_Seconds]"
-                      cachedDataType="i4"
-                      cachedName="Time_Spent_OnScene_Seconds"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time_Spent_OnScene_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time_Spent_OnScene_Seconds]" />
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Call_Created_Standard_Display_Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Call_Created_Standard_Display_Time"
+                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Created_Standard_Display_Time]"
+                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_Standard_Display_Time]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -527,34 +493,6 @@
                       length="50"
                       name="Disposition_Name" />
                     <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Creation_to_Entered_Seconds]"
-                      dataType="i4"
-                      name="Call_Creation_to_Entered_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Creation_to_Enroute_Seconds]"
-                      dataType="i4"
-                      name="Call_Creation_to_Enroute_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Entered_to_Enroute_Seconds]"
-                      dataType="i4"
-                      name="Call_Entered_to_Enroute_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Enroute_to_OnScene_Seconds]"
-                      dataType="i4"
-                      name="Call_Enroute_to_OnScene_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Creation_to_OnScene_Seconds]"
-                      dataType="i4"
-                      name="Call_Creation_to_OnScene_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Incident_Duration_Seconds]"
-                      dataType="i4"
-                      name="Incident_Duration_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time_Spent_OnScene_Seconds]"
-                      dataType="i4"
-                      name="Time_Spent_OnScene_Seconds" />
-                    <externalMetadataColumn
                       refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Enroute_to_Closed_Seconds]"
                       dataType="i4"
                       name="Call_Enroute_to_Closed_Seconds" />
@@ -564,6 +502,12 @@
                       dataType="str"
                       length="25"
                       name="Call_Number" />
+                    <externalMetadataColumn
+                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Call_Created_Standard_Display_Time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="Call_Created_Standard_Display_Time" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -955,80 +899,6 @@
                       lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_Standard_Display_Time]"
                       name="Call_Created_Standard_Display_Time"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_Military_Display_Time]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Created_Military_Display_Time]"
-                      length="11"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Created_Military_Display_Time]"
-                      name="Call_Created_Military_Display_Time"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_Entered_Seconds]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Creation_to_Entered_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_Entered_Seconds]"
-                      name="Call_Creation_to_Entered_Seconds"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_Enroute_Seconds]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Creation_to_Enroute_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_Enroute_Seconds]"
-                      name="Call_Creation_to_Enroute_Seconds"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Entered_to_Enroute_Seconds]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Entered_to_Enroute_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Entered_to_Enroute_Seconds]"
-                      name="Call_Entered_to_Enroute_Seconds"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Enroute_to_OnScene_Seconds]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Enroute_to_OnScene_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Enroute_to_OnScene_Seconds]"
-                      name="Call_Enroute_to_OnScene_Seconds"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_OnScene_Seconds]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Creation_to_OnScene_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Call_Creation_to_OnScene_Seconds]"
-                      name="Call_Creation_to_OnScene_Seconds"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Incident_Duration_Seconds]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Incident_Duration_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Incident_Duration_Seconds]"
-                      name="Incident_Duration_Seconds"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time_Spent_OnScene_Seconds]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Time_Spent_OnScene_Seconds]"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time_Spent_OnScene_Seconds]"
-                      name="Time_Spent_OnScene_Seconds"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1194,40 +1064,6 @@
                       dataType="str"
                       length="11"
                       name="Call_Created_Standard_Display_Time" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Created_Military_Display_Time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      name="Call_Created_Military_Display_Time" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Creation_to_Entered_Seconds]"
-                      dataType="i4"
-                      name="Call_Creation_to_Entered_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Creation_to_Enroute_Seconds]"
-                      dataType="i4"
-                      name="Call_Creation_to_Enroute_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Entered_to_Enroute_Seconds]"
-                      dataType="i4"
-                      name="Call_Entered_to_Enroute_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Enroute_to_OnScene_Seconds]"
-                      dataType="i4"
-                      name="Call_Enroute_to_OnScene_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Call_Creation_to_OnScene_Seconds]"
-                      dataType="i4"
-                      name="Call_Creation_to_OnScene_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Incident_Duration_Seconds]"
-                      dataType="i4"
-                      name="Incident_Duration_Seconds" />
-                    <externalMetadataColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Time_Spent_OnScene_Seconds]"
-                      dataType="i4"
-                      name="Time_Spent_OnScene_Seconds" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1386,13 +1222,6 @@
                       lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Created_Standard_Display_Time]"
                       name="Call_Created_Standard_Display_Time" />
                     <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Created_Military_Display_Time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Created_Military_Display_Time]"
-                      name="Call_Created_Military_Display_Time" />
-                    <outputColumn
                       refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Source]"
                       codePage="1252"
                       dataType="str"
@@ -1421,45 +1250,10 @@
                       lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Disposition_Name]"
                       name="Disposition_Name" />
                     <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Creation_to_Entered_Seconds]"
-                      dataType="i4"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Creation_to_Entered_Seconds]"
-                      name="Call_Creation_to_Entered_Seconds" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Creation_to_Enroute_Seconds]"
-                      dataType="i4"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Creation_to_Enroute_Seconds]"
-                      name="Call_Creation_to_Enroute_Seconds" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Entered_to_Enroute_Seconds]"
-                      dataType="i4"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Entered_to_Enroute_Seconds]"
-                      name="Call_Entered_to_Enroute_Seconds" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Enroute_to_OnScene_Seconds]"
-                      dataType="i4"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Enroute_to_OnScene_Seconds]"
-                      name="Call_Enroute_to_OnScene_Seconds" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Creation_to_OnScene_Seconds]"
-                      dataType="i4"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Creation_to_OnScene_Seconds]"
-                      name="Call_Creation_to_OnScene_Seconds" />
-                    <outputColumn
                       refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Enroute_to_Closed_Seconds]"
                       dataType="i4"
                       lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Enroute_to_Closed_Seconds]"
                       name="Call_Enroute_to_Closed_Seconds" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Incident_Duration_Seconds]"
-                      dataType="i4"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Incident_Duration_Seconds]"
-                      name="Incident_Duration_Seconds" />
-                    <outputColumn
-                      refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Time_Spent_OnScene_Seconds]"
-                      dataType="i4"
-                      lineageId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Time_Spent_OnScene_Seconds]"
-                      name="Time_Spent_OnScene_Seconds" />
                     <outputColumn
                       refId="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Call_Number]"
                       codePage="1252"
@@ -1509,7 +1303,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{35624CDF-4E4C-415F-90B7-67F12AA2E873}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;&#x9;&#x9;TABLE_TYPE ='BASE TABLE'&#xA;&#x9;AND TABLE_SCHEMA = 'cad'&#xA;&#x9;AND TABLE_NAME = 'vw_CALL_DETAILS_JAD_EXTRACTSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [cad].[vw_CALL_DETAILS_JAD_EXTRACTSTG]&#xA;GO&#xA;CREATE TABLE [cad].[vw_CALL_DETAILS_JAD_EXTRACTSTG](&#xA;&#x9;[Call_Type] [varchar](50) NULL,&#xA;&#x9;[Call_Type_Grouping] [varchar](100) NULL,&#xA;&#x9;[Call_Location_Zip_Code] [varchar](25) NULL,&#xA;&#x9;[Call_Location_XCoord] [decimal](12,9) NULL,&#xA;      &#x9;[Call_Location_YCoord] [decimal](12,9) NULL,&#xA;      &#x9;[Location_Address] [varchar](100) NULL,&#xA;&#x9;[Year_Number] [int] NULL,&#xA;&#x9;[Month_Name] [varchar](20) NULL,&#xA;&#x9;[Actual_Date] [datetime] NULL,&#xA;&#x9;[Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Agency_Group] [varchar](20) NULL,&#xA;  &#x9;[Unit]  [varchar](25) NULL,&#xA;&#x9;[Call_Created_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Created_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[Call_Dispatched_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Dispatched_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[Call_Responded_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Responded_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[District_Name] [varchar](40) NULL,&#xA;&#x9;[CallTime_Two_Hour_Bucket] [varchar](40) NULL,&#xA;&#x9;[CallTime_Hour] [varchar](4) NULL,&#xA;&#x9;[Call_Source] [varchar](8) NULL,&#xA;&#x9;[Priority] [varchar](8) NULL,&#xA;&#x9;[Disposition_Code] [varchar](25) NULL,&#xA;&#x9;[Disposition_Name] [varchar](50) NULL,&#xA; &#x9;[Call_Creation_to_Entered_Seconds] [int] NULL,&#xA;      &#x9;[Call_Creation_to_Enroute_Seconds] [int] NULL,&#xA;     &#x9;[Call_Entered_to_Enroute_Seconds] [int] NULL,&#xA;      &#x9;[Call_Enroute_to_OnScene_Seconds][int] NULL,&#xA;    &#x9;[Call_Creation_to_OnScene_Seconds] [int] NULL,&#xA;    &#x9;[Incident_Duration_Seconds][int] NULL,&#xA;      &#x9;[Time_Spent_OnScene_Seconds] [int] NULL,&#xA;&#x9;[Call_Enroute_to_Closed_Seconds] [int] NULL,&#xA;&#x9;[Call_Number] [varchar](25) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;&#x9;&#x9;TABLE_TYPE ='BASE TABLE'&#xA;&#x9;AND TABLE_SCHEMA = 'cad'&#xA;&#x9;AND TABLE_NAME = 'vw_CALL_DETAILS_JAD_EXTRACTSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [cad].[vw_CALL_DETAILS_JAD_EXTRACTSTG]&#xA;GO&#xA;CREATE TABLE [cad].[vw_CALL_DETAILS_JAD_EXTRACTSTG](&#xA;&#x9;[Call_Type] [varchar](50) NULL,&#xA;&#x9;[Call_Type_Grouping] [varchar](100) NULL,&#xA;&#x9;[Call_Location_Zip_Code] [varchar](25) NULL,&#xA;&#x9;[Call_Location_XCoord] [decimal](12,9) NULL,&#xA;      &#x9;[Call_Location_YCoord] [decimal](12,9) NULL,&#xA;      &#x9;[Location_Address] [varchar](100) NULL,&#xA;&#x9;[Year_Number] [int] NULL,&#xA;&#x9;[Month_Name] [varchar](20) NULL,&#xA;&#x9;[Actual_Date] [datetime] NULL,&#xA;&#x9;[Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Agency_Group] [varchar](20) NULL,&#xA;  &#x9;[Unit]  [varchar](25) NULL,&#xA;&#x9;[Call_Created_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Created_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[Call_Dispatched_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Dispatched_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[Call_Responded_By_Agency_Name] [varchar](25) NULL,&#xA;&#x9;[Call_Responded_By_Agency_Group] [varchar](20) NULL,&#xA;&#x9;[District_Name] [varchar](40) NULL,&#xA;&#x9;[CallTime_Two_Hour_Bucket] [varchar](40) NULL,&#xA;&#x9;[CallTime_Hour] [varchar](4) NULL,&#xA;&#x9;[Call_Created_Standard_Display_Time] [char] (11) NULL,&#xA;&#x9;[Call_Source] [varchar](8) NULL,&#xA;&#x9;[Priority] [varchar](8) NULL,&#xA;&#x9;[Disposition_Code] [varchar](25) NULL,&#xA;&#x9;[Disposition_Name] [varchar](50) NULL,&#xA; &#xA;&#x9;[Call_Enroute_to_Closed_Seconds] [int] NULL,&#xA;&#x9;[Call_Number] [varchar](25) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1619,19 +1413,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
@@ -1641,6 +1422,19 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CAD_vw_Call_Details_JAD_ExtractSTG Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
